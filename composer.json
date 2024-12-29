@@ -1,0 +1,19 @@
+{
+    "name": "binafy/php-color-generator",
+    "description": "Generate Color with PHP",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Binafy\\PhpColorGenerator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Milwad",
+            "email": "98118400+milwad-dev@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
