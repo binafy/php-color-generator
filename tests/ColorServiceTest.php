@@ -65,4 +65,19 @@ class ColorServiceTest extends TestCase
             'blue' => '223',
         ], $colors);
     }
+
+    /**
+     * Test rgb to hex.
+     */
+    public function test_rgb_to_hex(): void
+    {
+        $color = ColorService::rgbToHex([
+            'red' => '19',
+            'green' => '99',
+            'blue' => '223',
+        ]);
+
+        $this->assertIsString($color);
+        $this->assertEquals('#1363df', $color);
+    }
 }
