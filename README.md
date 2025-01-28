@@ -29,26 +29,85 @@ composer require binafy/php-color-generator
 
 #### `hexToRGB(string $hex): array`
 
-If you may convert hex to RGB, you need to use `hexToRGB` method:
+If you may convert hex to RGB, you need to use `hexToRGB()` method:
 
 ```php
-use Binafy\PhpColorGenerator\ColorService;
+use Binafy\PhpColorGenerator\Color;
 
-ColorService::hexToRGB('1363df');
+Color::hexToRGB('1363df');
 ```
 
 #### `rgbToHex(string $hex): string`
 
-If you may convert RGB to hex, you need to use `rgbToHex` method:
+If you may convert RGB to hex, you need to use `rgbToHex()` method:
 
 ```php
-use Binafy\PhpColorGenerator\ColorService;
+use Binafy\PhpColorGenerator\Color;
 
-ColorService::rgbToHex([
+Color::rgbToHex([
     'red' => '19',
     'green' => '99',
     'blue' => '223',
 ]);
+```
+
+#### `darken(array $rgb, float $percentage): array`
+
+If you may get darken rgb color, you can use `darken()` method:
+
+```php
+use Binafy\PhpColorGenerator\Color;
+
+Color::darken([
+    'red' => '19',
+    'green' => '99',
+    'blue' => '223',
+], 0.5); // array ('red', 'blue', 'green')
+```
+
+
+#### `lighten(array $rgb, float $percentage): array`
+
+If you may get lighten rgb color, you can use `lighten()` method:
+
+```php
+use Binafy\PhpColorGenerator\Color;
+
+Color::lighten([
+    'red' => '19',
+    'green' => '99',
+    'blue' => '223',
+], 0.5); // array ('red', 'blue', 'green')
+```
+
+#### `generateShades(string $hex, int $times): array`
+
+If you want to generate shades from hex color, you can use `generateShades()` method:
+
+```php
+use Binafy\PhpColorGenerator\Color;
+
+Color::generateShades('1363df', 10);
+```
+
+#### `generateTints(string $hex, int $times): array`
+
+If you want to generate tints from hex color, you can use `generateTints()` method:
+
+```php
+use Binafy\PhpColorGenerator\Color;
+
+Color::generateTints('1363df', 10);
+```
+
+#### `generateDarkBrightColors(string $hex, int $times = 10): array`
+
+If you want to generate tints, shades from hex color, you can use `generateDarkBrightColors()` method:
+
+```php
+use Binafy\PhpColorGenerator\Color;
+
+Color::generateDarkBrightColors('1363df', 10); // array ('dark', 'light')
 ```
 
 <a name="security"></a>
