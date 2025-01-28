@@ -5,21 +5,6 @@ namespace Binafy\PhpColorGenerator;
 class ColorService
 {
     /**
-     * The hex color.
-     *
-     * @var string
-     */
-    protected $hex;
-
-    /**
-     * Create new instance.
-     */
-    public function __construct(string $hex)
-    {
-        $this->hex = $hex;
-    }
-
-    /**
      * Convert hex color to RGB.
      */
     public static function hexToRGB(string $hex): array
@@ -103,11 +88,11 @@ class ColorService
     /**
      * Generate dark and light colors.
      */
-    public function generateDarkBrightColors(int $times = 10): array
+    public function generateDarkBrightColors(string $hex, int $times = 10): array
     {
         return [
-            'dark' => $this->generateShades($this->hex, $times),
-            'light' => $this->generateTints($this->hex, $times),
+            'dark' => $this->generateShades($hex, $times),
+            'light' => $this->generateTints($hex, $times),
         ];
     }
 }
