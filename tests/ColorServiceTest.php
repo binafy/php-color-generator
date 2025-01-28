@@ -80,4 +80,23 @@ class ColorServiceTest extends TestCase
         $this->assertIsString($color);
         $this->assertEquals('#1363df', $color);
     }
+
+    /**
+     * Test rgb to darken colors.
+     */
+    public function test_rgb_to_darken_colors(): void
+    {
+        $colors = ColorService::darken([
+            'red' => '19',
+            'green' => '99',
+            'blue' => '223',
+        ], 0.5);
+
+        $this->assertIsArray($colors);
+        $this->assertEquals([
+            'red' => 10,
+            'green' => 50,
+            'blue' => 112,
+        ], $colors);
+    }
 }
