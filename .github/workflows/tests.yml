@@ -49,7 +49,7 @@ jobs:
 
             - name: Install dependencies
               run: |
-                  composer install --no-interaction
+                  composer require "php:${{ matrix.php }}" "phpunit/phpunit:${{ matrix.phpunit }}"" --no-interaction
                   composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction
             - name: Execute tests
               run: vendor/bin/phpunit
