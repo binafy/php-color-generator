@@ -1,8 +1,23 @@
 {
     "name": "binafy/php-color-generator",
-    "description": "Generate Color with PHP",
+    "description": "Generate colors with PHP",
+    "keywords": [
+        "binafy",
+        "milwad",
+        "php",
+        "library",
+        "php-color",
+        "php-color-generator",
+        "color-generator",
+        "hex",
+        "php-generator-color",
+        "hex-to-rgb",
+        "rgb"
+    ],
+    "homepage": "https://github.com/binafy/php-color-generator",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Milwad Khosravi",
@@ -16,7 +31,6 @@
             "homepage": "https://github.com/binafy"
         }
     ],
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Binafy\\PhpColorGenerator\\": "src/"
@@ -27,5 +41,11 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^9.4"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests"
     }
 }
