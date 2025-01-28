@@ -2,17 +2,17 @@
 
 namespace Binafy\tests;
 
-use Binafy\PhpColorGenerator\ColorService;
+use Binafy\PhpColorGenerator\Color;
 use PHPUnit\Framework\TestCase;
 
-class ColorServiceTest extends TestCase
+class ColorTest extends TestCase
 {
     /**
      * Test get shades from hex color.
      */
     public function test_get_shades_from_hex_color(): void
     {
-        $colors = ColorService::generateShades('1363df', 10);
+        $colors = Color::generateShades('1363df', 10);
 
         $this->assertIsArray($colors);
         $this->assertEquals([
@@ -34,7 +34,7 @@ class ColorServiceTest extends TestCase
      */
     public function test_get_tints_from_hex_color(): void
     {
-        $colors = ColorService::generateTints('1363df', 10);
+        $colors = Color::generateTints('1363df', 10);
 
         $this->assertIsArray($colors);
         $this->assertEquals([
@@ -56,7 +56,7 @@ class ColorServiceTest extends TestCase
      */
     public function test_hex_to_rgb(): void
     {
-        $colors = ColorService::hexToRgb('1363df');
+        $colors = Color::hexToRgb('1363df');
 
         $this->assertIsArray($colors);
         $this->assertEquals([
@@ -71,7 +71,7 @@ class ColorServiceTest extends TestCase
      */
     public function test_rgb_to_hex(): void
     {
-        $color = ColorService::rgbToHex([
+        $color = Color::rgbToHex([
             'red' => '19',
             'green' => '99',
             'blue' => '223',
@@ -86,7 +86,7 @@ class ColorServiceTest extends TestCase
      */
     public function test_rgb_to_darken_colors(): void
     {
-        $colors = ColorService::darken([
+        $colors = Color::darken([
             'red' => '19',
             'green' => '99',
             'blue' => '223',
@@ -105,7 +105,7 @@ class ColorServiceTest extends TestCase
      */
     public function test_rgb_to_lighten_colors(): void
     {
-        $colors = ColorService::lighten([
+        $colors = Color::lighten([
             'red' => '19',
             'green' => '99',
             'blue' => '223',
@@ -124,7 +124,7 @@ class ColorServiceTest extends TestCase
      */
     public function test_generate_dark_and_bright_colors_from_hex_color(): void
     {
-        $colors = (new ColorService)->generateDarkBrightColors('1363df');
+        $colors = (new Color)->generateDarkBrightColors('1363df');
 
         $this->assertIsArray($colors);
         $this->assertArrayHasKey('dark', $colors);

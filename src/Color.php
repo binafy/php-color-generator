@@ -2,7 +2,7 @@
 
 namespace Binafy\PhpColorGenerator;
 
-class ColorService
+class Color
 {
     /**
      * Convert hex color to RGB.
