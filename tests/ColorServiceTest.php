@@ -5,7 +5,7 @@ namespace Binafy\tests;
 use Binafy\PhpColorGenerator\ColorService;
 use PHPUnit\Framework\TestCase;
 
-class GenerateHintShadeTest extends TestCase
+class ColorServiceTest extends TestCase
 {
     /**
      * Test get shades from hex color.
