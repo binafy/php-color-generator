@@ -99,4 +99,23 @@ class ColorServiceTest extends TestCase
             'blue' => 112,
         ], $colors);
     }
+
+    /**
+     * Test rgb to lighten colors.
+     */
+    public function test_rgb_to_lighten_colors(): void
+    {
+        $colors = ColorService::lighten([
+            'red' => '19',
+            'green' => '99',
+            'blue' => '223',
+        ], 0.5);
+
+        $this->assertIsArray($colors);
+        $this->assertEquals([
+            'red' => 137,
+            'green' => 177,
+            'blue' => 239,
+        ], $colors);
+    }
 }
