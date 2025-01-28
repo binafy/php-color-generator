@@ -28,4 +28,26 @@ class GenerateHintShadeTest extends TestCase
             '#000000',
         ], $colors);
     }
+
+    /**
+     * Test get tints from hex color.
+     */
+    public function test_get_tints_from_hex_color(): void
+    {
+        $colors = ColorService::generateTints('1363df', 10);
+
+        $this->assertIsArray($colors);
+        $this->assertEquals([
+            '#2b73e2',
+            '#4282e5',
+            '#5a92e9',
+            '#71a1ec',
+            '#89b1ef',
+            '#a1c1f2',
+            '#b8d0f5',
+            '#d0e0f9',
+            '#e7effc',
+            '#ffffff',
+        ], $colors);
+    }
 }
