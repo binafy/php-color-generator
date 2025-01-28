@@ -28,3 +28,38 @@ composer require binafy/php-color-generator
 ## Usage
 
 #### 
+
+
+<a name="security"></a>
+## Security
+
+If you discover any security-related issues, please email `binafy23@gmail.com` instead of using the issue tracker.
+
+<a name="chanelog"></a>
+## Changelog
+
+The changelog can be found in the `CHANGELOG.md` file of the GitHub repository. It lists the changes, bug fixes, and improvements made to each version of the Laravel User Monitoring package.
+
+<a name="license"></a>
+## License
+
+The MIT License (MIT). Please see [License File](https://github.com/binafy/php-color-generator/blob/1.x/LICENSE) for more information.
+
+<a name="start-history"></a>
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=binafy/php-color-generator&type=Date)](https://star-history.com/#binafy/php-color-generator&Date)
+
+<a name="conclusion"></a>
+## Conclusion
+
+Congratulations! You have successfully installed and integrated the Laravel User Monitoring package into your Laravel application. By effectively logging and analyzing user activity, you can gain valuable insights that can help you improve your application's user experience and performance. If you have any questions or need further assistance, please refer to the documentation or seek help from the package's GitHub repository. Happy monitoring!
+
+<a name="donate"></a>
+## Donate
+
+If this package is helpful for you, you can buy a coffee for me :) ❤️
+
+- Iranian Gateway: https://daramet.com/milwad_khosravi
+- Paypal Gateway: SOON
+- MetaMask Address: `0xf208a562c5a93DEf8450b656c3dbc1d0a53BDE58`
