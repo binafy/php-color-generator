@@ -8,8 +8,31 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                php: [7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4]
+                php: [7.3, 7.4, 8.1, 8.2, 8.3, 8.4]
+                phpunit: [9.4, 10.0, 11.0]
                 dependency-version: [prefer-lowest, prefer-stable]
+                include:
+                    - php: 7.3
+                      phpunit: 9.4
+
+                    - php: 7.4
+                      phpunit: 9.4
+
+                    - php: 8.1
+                      phpunit: 10.0
+
+                    - php: 8.2
+                      phpunit: 11.0
+
+                    - php: 8.3
+                      phpunit: 11.0
+
+                exclude:
+                    - php: 8.3
+                      phpunit: 9.4
+
+                    - phpunit: 8.2
+                      php: 9.4
 
         name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.dependency-version }}
 
