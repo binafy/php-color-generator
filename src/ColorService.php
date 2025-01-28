@@ -11,6 +11,9 @@ class ColorService
      */
     protected $hex;
 
+    /**
+     * Create new instance.
+     */
     public function __construct(string $hex)
     {
         $this->hex = $hex;
