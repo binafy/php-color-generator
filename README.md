@@ -16,7 +16,7 @@ The `PHP Color Generator` is a versatile PHP package designed for easy and effic
 
 ***
 - ```PHP >= 7.3```
-- 
+
 ## Installation
 
 You can install the package with Composer.
@@ -27,8 +27,29 @@ composer require binafy/php-color-generator
 
 ## Usage
 
-#### 
+#### `hexToRGB(string $hex): array`
 
+If you may convert hex to RGB, you need to use `hexToRGB` method:
+
+```php
+use Binafy\PhpColorGenerator\ColorService;
+
+ColorService::hexToRGB('1363df');
+```
+
+#### `rgbToHex(string $hex): string`
+
+If you may convert RGB to hex, you need to use `rgbToHex` method:
+
+```php
+use Binafy\PhpColorGenerator\ColorService;
+
+ColorService::rgbToHex([
+    'red' => '19',
+    'green' => '99',
+    'blue' => '223',
+]);
+```
 
 <a name="security"></a>
 ## Security
