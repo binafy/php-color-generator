@@ -9,3 +9,5 @@
 [![Passed Tests](https://github.com/binafy/php-color-generator/actions/workflows/tests.yml/badge.svg)](https://github.com/binafy/php-color-generator/actions/workflows/tests.yml)
 
 ## Introduction
+
+The `PHP Color Generator` is a versatile PHP package designed for easy and efficient color manipulation. Whether you're working with color schemes, themes, or UI designs, this package provides a set of utilities to convert, darken, lighten, and generate shades or tints of colors. It supports the conversion of hex to RGB and vice versa, allows for adjusting the lightness or darkness of colors, and can generate a series of tints or shades based on a base color. Ideal for designers and developers who need to programmatically handle color variations for dynamic interfaces or applications.
