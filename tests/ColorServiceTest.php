@@ -118,4 +118,16 @@ class ColorServiceTest extends TestCase
             'blue' => 239,
         ], $colors);
     }
+
+    /**
+     * Test generate dark and bright colors from hex color.
+     */
+    public function test_generate_dark_and_bright_colors_from_hex_color(): void
+    {
+        $colors = (new ColorService)->generateDarkBrightColors('1363df');
+
+        $this->assertIsArray($colors);
+        $this->assertArrayHasKey('dark', $colors);
+        $this->assertArrayHasKey('light', $colors);
+    }
 }
