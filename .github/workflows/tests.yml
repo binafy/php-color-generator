@@ -33,7 +33,7 @@ jobs:
                     - php: 8.5
                       phpunit: 13.0
 
-        name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.dependency-version }}
+        name: P${{ matrix.php }} - U${{ matrix.phpunit }} - ${{ matrix.dependency-version }}
 
         steps:
             - name: Checkout code
